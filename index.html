@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- loader  -->
+    <section class="cover">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </section>
+    <!-- BearBox  -->
+    <section class="cover">
+      <div class="bearbox">
+        <div class="shutter"></div>
+        <img src="./bear.png" alt="" />
+      </div>
+    </section>
+    <!-- Lottie  -->
+    <section class="cover">
+      <div class="animationCanvas" id="animationCanvas"></div>
+    </section>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.5/lottie.min.js"
+      integrity="sha512-6dYBCNIZ9riy73O8JuGbTYlSTaHLWT1ngC+fp6xqNAx/B4rft2q1k3trWGK1fmtl6NnOzD9NjIKt0i1u7KTUvA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      const animationCanvas = document.getElementById("animationCanvas");
+      const animation = bodymovin.loadAnimation({
+        wrapper: animationCanvas,
+        animType: "svg",
+        loop: true,
+        autoplay: true,
+        path: "./animation.json",
+      });
+    </script>
+  </body>
+</html>

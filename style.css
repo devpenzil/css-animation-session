@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.cover {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  filter: hue-rotate(0deg);
+  background-color: rebeccapurple;
+  margin: 10px;
+  border-radius: 50%;
+  transform: translateY(0);
+}
+
+.circle:nth-child(1) {
+  -webkit-animation: circleAnimation 1s ease-in infinite alternate;
+          animation: circleAnimation 1s ease-in infinite alternate;
+}
+
+.circle:nth-child(2) {
+  -webkit-animation: circleAnimation 1s ease-in 0.5s infinite alternate;
+          animation: circleAnimation 1s ease-in 0.5s infinite alternate;
+}
+
+.circle:nth-child(3) {
+  -webkit-animation: circleAnimation 1s ease-in 1s infinite alternate;
+          animation: circleAnimation 1s ease-in 1s infinite alternate;
+}
+
+@-webkit-keyframes circleAnimation {
+  to {
+    filter: hue-rotate(0deg);
+    transform: translateY(40px);
+  }
+  from {
+    filter: hue-rotate(360deg);
+    transform: translateY(0px);
+  }
+}
+
+@keyframes circleAnimation {
+  to {
+    filter: hue-rotate(0deg);
+    transform: translateY(40px);
+  }
+  from {
+    filter: hue-rotate(360deg);
+    transform: translateY(0px);
+  }
+}
+/* lottie  */
+.animationCanvas {
+  width: 50%;
+  height: 50vh;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+.bearbox {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: rgba(128, 128, 128, 0.5019607843);
+  position: relative;
+}
+.bearbox img {
+  width: 80%;
+  position: absolute;
+  bottom: -20px;
+  left: 30px;
+  z-index: -1;
+  -webkit-animation: bearAnimation 2s ease alternate infinite;
+          animation: bearAnimation 2s ease alternate infinite;
+}
+.bearbox .shutter {
+  width: 100%;
+  height: 300px;
+  background-color: burlywood;
+  z-index: 10;
+  transform: translateY(-250px);
+  transition: 0.5s;
+  border-bottom: 6px solid gray;
+}
+
+.bearbox:hover .shutter {
+  transform: translateY(-50px);
+}
+
+@-webkit-keyframes bearAnimation {
+  to {
+    transform: matrix(1, 0, 0, 1, 0, 3);
+  }
+  from {
+    transform: matrix(1, 0, 0, 1, 3, 0);
+  }
+}
+
+@keyframes bearAnimation {
+  to {
+    transform: matrix(1, 0, 0, 1, 0, 3);
+  }
+  from {
+    transform: matrix(1, 0, 0, 1, 3, 0);
+  }
+}/*# sourceMappingURL=style.css.map */
